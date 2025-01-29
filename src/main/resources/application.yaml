@@ -24,6 +24,12 @@ spring:
         indexType: IVF_FLAT
         metricType: COSINE
         initialize-schema: true
+
+  netty:
+    dns:
+      use-native-resolver: false
+
+
 sfg:
   aiapp:
     vectorStorePath: /tmp/vectorstore.json
@@ -42,22 +48,11 @@ sfg:
 # What is a good truck to pull a Sportsman 232 boat? Expected answer: Chevy Colorado
 # What is a good truck to pull a Sportsman 322 boat? Expected answer: Chevy 2500
 # What is a good truck to pull a Scout 380 LXF boat? Expected answer: Chevy 3500 Duramax
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#logging:
+#  level:
+#    io:
+#      netty:
+#        resolver:
+#          dns: ERROR
+#
+#
