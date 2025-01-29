@@ -33,7 +33,7 @@ public class LoadVectorStore implements CommandLineRunner {
             log.debug("Loading documents into vector store");
 
             vectorStoreProperties.getDocumentsToLoad().forEach(document -> {
-                System.out.println("Loading document: " + document.getFilename());
+                log.debug("Loading document: " + document.getFilename());
 
                 TikaDocumentReader documentReader = new TikaDocumentReader(document);
                 List<Document> documents = documentReader.get();
